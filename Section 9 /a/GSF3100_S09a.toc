@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Processus d'investissement}{2}{0}{1}
+\beamer@sectionintoc {2}{Stratégies de gestion passive}{8}{0}{2}
+\beamer@sectionintoc {3}{Facteurs de risque}{13}{0}{3}
+\beamer@sectionintoc {4}{Approche Top-Down vs. Bottom-Up}{16}{0}{4}
+\beamer@sectionintoc {5}{Stratégies de gestion active}{20}{0}{5}

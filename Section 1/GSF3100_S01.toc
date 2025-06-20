@@ -1,0 +1,14 @@
+\beamer@sectionintoc {1}{Coordonnées et disponibilités}{2}{0}{1}
+\beamer@sectionintoc {2}{Contenu et activités}{3}{0}{2}
+\beamer@sectionintoc {3}{Contenu et activités}{4}{0}{3}
+\beamer@sectionintoc {4}{Contenu et activités}{5}{0}{4}
+\beamer@sectionintoc {5}{Matériel didactique}{6}{0}{5}
+\beamer@sectionintoc {6}{Évaluations sommatives}{7}{0}{6}
+\beamer@sectionintoc {7}{Objectif du cours}{10}{0}{7}
+\beamer@sectionintoc {8}{Actif financier}{14}{0}{8}
+\beamer@sectionintoc {9}{Intermédiation financière}{16}{0}{9}
+\beamer@sectionintoc {10}{Marché financier}{18}{0}{10}
+\beamer@sectionintoc {11}{Titre à revenu fixe}{21}{0}{11}
+\beamer@sectionintoc {12}{Titre à revenu fixe}{22}{0}{12}
+\beamer@sectionintoc {13}{Titre à revenu fixe}{23}{0}{13}
+\beamer@sectionintoc {14}{Titre à revenu fixe}{24}{0}{14}

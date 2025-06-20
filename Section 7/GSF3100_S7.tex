@@ -1,0 +1,251 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetheme{default}
+
+\usecolortheme{default}
+
+\title[S07  Marché des obligations corporatives]{Section 07 : Marché des obligations corporatives}
+\subtitle{GSF-3100 Marché des capitaux}
+\author[SP. Boucher]{Simon-Pierre Boucher\inst{1}}
+\institute[Université Laval]
+{
+  \inst{1}%
+  Département de finance, assurance et immobilier\\
+  Faculté des sciences de l'administration\\
+  Université Laval}
+\date[Automne 2021]{Automne 2021}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Introduction}
+La principale différence entre les obligations gouvernementales et corporatives se situe au niveau du risque de crédit: 
+\begin{itemize}
+\item Il faut tenir compte de la probabilité que l’émetteur ne soit pas en mesure de payer les coupons et/ou la valeur nominale.
+\end{itemize}
+Principaux instruments financiers:
+\begin{itemize}
+\item Obligation corporative (corporate bond);
+\item Billet à moyen terme (medium-term note); 
+\item Autres instruments.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Primes de risque de crédit et d’insolvabilité}
+\begin{itemize}
+\item Lorsqu’il existe une probabilité de défaut, il faut considérer le taux de rendement espéré $E(r)$, soit l’espérance des taux de rendement interne obtenus sous différents scénarios.
+\item Prime de risque de crédit: $y^{corp} – y^{réf}$.
+\item Prime d’insolvabilité: $y^{corp} – E(r^{corp})$.
+\item Un investisseur averse au risque va acheter une obligation corporative seulement si la prime de risque de crédit est supérieure à la prime d’insolvabilité: Il faut que $E(r^{corp}) > y^{réf}$.
+\item Bien investir dans les obligations corporatives implique donc une bonne évaluation de $E(r^{corp})$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Obligation corporative}
+\begin{block}{Caractéristiques générales:}
+\begin{itemize}
+\item Inclut un acte de fiducie (indenture) décrivant les caractéristiques de l’émission;
+\item Peut inclure un fonds d’amortissement (sinking fund) pour étaler le fardeau du remboursement de la dette sur plusieurs années;
+\item Priorité sur les actionnaires lors d’une liquidation;
+\item Obligation avec aucune garantie: Débenture;
+\item Garanties possibles: Immobilisation, autres titres financiers, équipement, filiales, endossement;
+\item Rang de priorité lorsque la même garantie est offerte sur plus d’une émission.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Obligation corporative}
+\begin{block}{Clauses optionnelles courantes:}
+\begin{itemize}
+\item Rachat (call): L’émetteur a l’option de rembourser l’obligation avant l’échéance;
+\item Remboursement (refund): L’émetteur a l’option de rembourser l’obligation pour se refinancer (à de meilleures conditions);
+\item Conversion: L’investisseur a l’option de convertir l’obligation en actions de la compagnie;
+\item Échéance rapprochable: L’investisseur a l’option d’obtenir un remboursement avant l’échéance;
+\item Échéance reportable: L’investisseur a l’option de retarder le remboursement.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Agences de notation}
+\begin{itemize}
+\item Description: Organismes spécialisés dans l’évaluation du crédit des sociétés faisant des émissions de titres à revenu fixe.
+\item Leur évaluation finale du risque de crédit d’une émission est notée à l’aide d’une cote de crédit. L’obtention d’une cote de crédit est essentielle à la réussite d’une émission. 
+\item Leur capacité à remplir leurs fonctions dépend de leur grande réputation d’objectivité et de jugement.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Principales agences de notation}
+\begin{block}{Canada}
+\begin{itemize}
+\item Standard & Poor’s (www.sandp.com), achat de CBRS (Canadian Bond Rating Service) en 2000;
+\item DBRS Morningstar, achat de DBRS (Dominion Bond Rating Service) en 2019 (www.dbrsmorningstar.com);
+\item Moody’s Investors Service (www.moodys.ca).
+\end{itemize}
+\end{block}
+\begin{block}{USA}
+\begin{itemize}
+\item Moody’s Investors Service (www.moodys.com);
+\item Standard & Poor’s (www.sandp.com);
+\item Fitch Ratings (www.fitchratings.com).
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Cotes de crédit}
+Les cotes sont divisées en trois catégories:  
+\begin{itemize}
+\item Qualifiée pour l’investissement (investment grade): 
+\begin{itemize}
+\item AAA, AA+, AA, AA-, A+, A, A-, BBB+, BBB, BBB-;
+\end{itemize}
+\item Nettement spéculative (distinctly speculative):
+\begin{itemize} 
+\item BB+, BB, BB-, B+, B, B-;
+\end{itemize}
+\item Principalement spéculative (predominantly speculative): 
+\begin{itemize} 
+\item CCC+, CCC, CCC-, CC, C, D.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Analyse de crédit}
+\begin{itemize}
+\item L’analyse de crédit est le nom de la méthodologie que les firmes de notations utilisent pour évaluer le risque de défaut d’une obligation corporative et en déterminer la cote de crédit. 
+\item Les trois principaux facteurs considérés dans l’analyse de crédit:
+\begin{itemize}
+\item Provisions de l’émission (covenants);
+\item Garanties de l’émission (collaterals);
+\item Capacité de payer de la firme. 
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Analyse de crédit}
+\begin{block}{Analyse des provisions de l’émission:}
+\begin{itemize}
+\item Examen des protections offertes aux détenteurs d’obligations qui limitent la discrétion des gestionnaires de la firme émettrice.  
+\item Deux types de provisions: 
+\begin{itemize}
+\item Provisions affirmatives ou positives: L’émetteur promet de faire certaines choses; 
+\item Provisions négatives ou restrictives: L’émetteur ne peut faire certaines choses. 
+\end{itemize}
+\item Provisions les plus courantes: Limites sur la capacité d’endettement de la firme. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Analyse de crédit}
+\begin{block}{Analyse des garanties de l’émission:}
+\begin{itemize}
+\item Examen des protections offertes aux détenteurs d’obligations qui garantissent la valeur d’une obligation en cas de défaut de la firme émettrice.   
+\item Deux types de faillite: 
+\begin{itemize}
+\item Liquidation: Les bénéfices d’une liquidation sont distribués aux créditeurs en ordre de priorité absolue, à partir des plus sécurisés;
+\item Réorganisation: La priorité absolue n’est souvent pas respectée, mais les créditeurs plus sécurisés ont un pouvoir de négociation plus grand.  
+\end{itemize}
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Analyse de la capacité de payer de la firme}
+Examen de la capacité d’un émetteur à générer suffisamment de flux monétaires pour être en mesure de payer ses obligations. 
+
+\vspace{1cm}
+
+\textbf{1-}Évaluation du risque d’affaires: Analyse du risque associé aux flux monétaires opérationnels, établie à partir des perspectives économiques de la firme et de son industrie (cycle économique, perspectives de croissance, compétition, dépenses en recherche et développement, sources de l’offre, niveau de réglementation et ressources humaines); 
+
+\end{frame}
+
+\begin{frame}{Analyse de la capacité de payer de la firme}
+\textbf{2-} Évaluation du risque de gouvernance: Analyse de la structure de propriété de la firme, des pratiques suivies par l’équipe de gestion et des politiques de divulgation financière de la firme; \\ 
+
+\vspace{1cm}
+ 
+Deux catégories de mécanisme de gouvernance: 
+\begin{itemize}
+\item Alignement des intérêts des gestionnaires avec ceux des actionnaires;
+\item Établissement d’un système efficace de contrôles internes, à commencer par un conseil d’administration indépendant.
+\end{itemize} 
+\end{frame}
+
+\begin{frame}{Analyse de la capacité de payer de la firme}
+\textbf{3-} Évaluation du risque financier: Analyse de ratios financiers et d’autres éléments du financement de la firme. 
+
+
+\vspace{1cm}
+ 
+Éléments les plus pertinents des états financiers: 
+\begin{itemize}
+\item Couverture d’intérêt;
+\item Endettement;
+\item Flux monétaires;
+\item Actifs nets;
+\item Liquidité (working capital).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Obligation à haut rendement}
+\begin{itemize}
+\item Description: Obligation corporative qui représente un investissement de catégorie nettement spéculative ou principalement spéculative (i.e. avec une cote de crédit inférieure à BBB-). 
+\item Deux types: 
+\begin{itemize}
+\item Émission originale $\approx$ 70 \% du marché;
+\item Ange déchu  (fallen angel) $\approx$ 30 \% du marché
+\begin{itemize}
+\item Chute de cote de crédit due à une acquisition par endettement (leveraged buyout) ou une recapitalisation, ou d’autres raisons (difficulté financière, etc.).
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Obligation à haut rendement}
+\begin{itemize}
+\item Les obligations à haut rendement peuvent présenter des structures plus complexes et plus attrayantes pour les émetteurs, leur donnant une plus grande flexibilité en cas de situation difficile: 
+\begin{itemize}
+\item Obligation à coupons différés: Possibilité de repousser le paiement de certains coupons;
+\item Obligation \textbf{step-up}: Taux de coupon qui augmente graduellement;
+\item Obligation \textbf{payment-in-kind}: Possibilité de refinancer les coupons aux mêmes conditions que l’obligation.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Obligation à haut rendement}
+\begin{itemize}
+\item Même en situation de défaut, les conséquences varient grandement d’une obligation à l’autre dépendamment du niveau de pertes encourues. 
+\item Le taux de recouvrement (recovery rate) indique le pourcentage de la valeur nominale récupérée. Il dépend grandement de la priorité.
+\item Certaines agences de notation publient des cotes de recouvrement (recovery ratings) pour évaluer le risque associé au faible recouvrement.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Billet à moyen terme}
+\begin{itemize}
+\item Description: Titre d’endettement normalement émis par une corporation distribué de façon continue par un agent de l’émetteur (i.e. une firme de courtage) plutôt que par achat ferme ou par adjudication.
+\begin{itemize}
+\item Se différencie d’une obligation corporative standard par son mode de distribution. 
+\end{itemize} 
+\item Échéances: Initialement émis pour des échéances de moyen terme (5 ans), mais maintenant offert pour un terme de 9 mois à 30 ans et plus.
+\item Peut être structuré selon diverses caractéristiques, comme avoir un coupon en une autre devise ou fonction d’un indice boursier. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Autres instruments du marché des obligations corporatives}
+\begin{itemize}
+\item Billet structuré (structured note): Titre créé par l’émission d’un billet à moyen terme accompagné d’une transaction simultanée de produits dérivés qui personnalise le titre pour les investisseurs. 
+\item Prêt bancaire (bank loan): 
+\begin{itemize}
+\item Prêt qualifié (investment-grade loan), aux firmes hautement cotées, ou prêt à haut risque (leveraged loan), pour les autres firmes;
+\item Prêt syndiqué (syndicated bank loan), fait par un groupe de banques. 
+\end{itemize}
+\item Obligation garantie sur prêt (collateralized loan obligation): Titre adossé à des prêts bancaires. 
+\end{itemize}
+\end{frame}
+\end{document}

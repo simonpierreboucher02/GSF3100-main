@@ -1,0 +1,221 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetheme{default}
+
+\usecolortheme{default}
+
+\title[S05 Marché Monétaire]{Section 05 : Marché Monétaire}
+\subtitle{GSF-3100 Marché des capitaux}
+\author[SP. Boucher]{Simon-Pierre Boucher\inst{1}}
+\institute[Université Laval]
+{
+  \inst{1}%
+  Département de finance, assurance et immobilier\\
+  Faculté des sciences de l'administration\\
+  Université Laval}
+\date[Automne 2021]{Automne 2021}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Introduction}
+\begin{itemize}
+\item Le marché monétaire est le marché où s’échange des actifs financiers avec une échéance courte (un an et moins).  
+\item Le marché monétaire est composé des instruments suivants:
+\begin{itemize}
+\item Bon du Trésor
+\item Papier commercial
+\item Acceptation bancaire
+\item Convention de rachat
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bon du trésor}
+\begin{itemize}
+\item Le bon du trésor est un titre financier émis à courte échéance par les gouvernements et possédant les caractéristiques suivantes:
+\begin{itemize}
+\item Sans risque sur le marché domestique
+\item Très liquide
+\item Émis à escompte (sans coupon)
+\item Dénomination en multiple de 1000 \$
+\item Émis sur le marché primaire par adjudication (enchère).
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bon du trésor canadien}
+\begin{block}{Caractéristiques}
+\begin{itemize}
+\item Échéances : 3 mois,  6 mois et 12 mois
+\item Cycle d’émission aux 2 semaines (mardi)
+\item Procède par réouverture d’émissions
+\item Convention de taux: Taux de rendement (nominal) sur une base de 365 jours par année.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Bon du trésor canadien}
+\begin{block}{Calcul taux de rendement}
+\begin{align*}
+Taux = \frac{D}{P} \times \frac{365}{t}=\frac{F-P}{P} \times \frac{365}{t}
+\end{align*}
+Sachant:
+\begin{itemize}
+\item $F$ représente la valeur nominal 
+\item $P$ représente le prix du bon du trésor 
+\item $t$ représente le temps avant l'échance 
+\item $D$ représente l'escompte, soit la différence entre la valeur nominal et le prix $(F-P)$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Bon du trésor canadien}
+\begin{block}{Calcul taux de rendement}
+Sachant les valeurs suivantes pour t :
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Échéance} & \multicolumn{1}{c}{\textbf{t}} \\ \midrule
+\textbf{3 mois}   & 98 jours                       \\
+\textbf{6 mois}   & 182 jours                      \\
+\textbf{12 mois}  & 364 jours                      \\ \bottomrule
+\end{tabular}
+\end{table}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Bon du Trésor Américain}
+\begin{block}{Caractéristiques}
+\\begin{itemize}
+\item  Échéances : 1 mois, 3 mois,  6 mois et 12 mois
+\item Cycle d’émission au semaine (lundi)
+\item Procède par réouverture d’émissions
+\item Convention de taux: Taux d’escompte (nominal) sur une base de 360 jours par année.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Bon du Trésor Américain}
+\begin{block}{Calcul taux de rendement}
+\begin{align*}
+Taux = \frac{D}{F} \times \frac{365}{t}=\frac{F-P}{F} \times \frac{360}{t}
+\end{align*}
+Sachant:
+\begin{itemize}
+\item $F$ représente la valeur nominal 
+\item $P$ représente le prix du bon du trésor 
+\item $t$ représente le temps avant l'échance 
+\item $D$ représente l'escompte, soit la différence entre la valeur nominal et le prix $(F-P)$
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Bon du Trésor Américain}
+\begin{block}{Calcul taux de rendement}
+Sachant les valeurs suivantes pour t :
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ll@{}}
+\toprule
+\textbf{Échéance} & \textbf{t} \\ \midrule
+\textbf{1 mois}   & 28 jours   \\
+\textbf{3 mois}   & 91 jours   \\
+\textbf{6 mois}   & 182 jours  \\
+\textbf{12 mois}  & 364 jours  \\ \bottomrule
+\end{tabular}
+\end{table}
+\end{block}
+\end{frame}
+
+\begin{frame}{Papier commerciaux}
+Billet émis par une corporation ayant une excellente cote de crédit.
+\begin{block}{Caractéristiques}
+\begin{itemize}
+\item Normalement à escompte
+\item Souvent endossé par une société-mère ou une marge de crédit bancaire
+\item Échéance usuelle de 30 à 90 jours
+\item Dénomination minimum de 50 000 \$
+\item Peut comporter des clauses de rachat
+\item Rendement supérieur à celui des bons du Trésor.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Acceptation bancaire}
+Billet garanti par une banque émis par une corporation n’ayant pas une cote de crédit suffisante pour émettre des papiers commerciaux.
+\begin{block}{Caractéristiques}
+\begin{itemize}
+\item Frais de la banque de 0,25 \% à 0,75 \%
+\item Normalement à escompte
+\item Échéance usuelle de 30 à 90 jours
+\item Dénomination minimum de 100 000 \$
+\item Très liquide
+\item Rendement supérieur à celui des bons du Trésor mais inférieur à celui du papier commercial.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Convention de rachat}
+Vente d’un titre financier avec la promesse de le racheter à une date future (fixée) au même prix plus un montant d’intérêt spécifié.
+\begin{block}{Caractéristiques}
+\begin{itemize}
+\item La \textbf{garantie} est le titre financier acheté
+\item Échéance usuelle: 1 à 364 jours
+\item Très liquide
+\item Taux d’intérêt fonction du loyer de l’argent
+\item Souvent utilisée par les courtiers en valeurs mobilières pour financer leur inventaire.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Convention de rachat}
+
+\begin{block}{Instruments reliés}
+\begin{itemize}
+\item Vente à réméré (sell/buyback agreement): Lorsqu’il n’y a pas d’intérêt de verser mais le prix de rachat est différent du prix de vente.
+\item Convention à un jour (overnight repo): Si l’échéance est d’une journée.
+\item Convention ouverte (open repo): Sans échéance (se terminant à la demande d’une des parties).
+\item Prêt de valeurs mobilières (securities lending agreement): Échange qui peut impliquer de la liquidité, mais aussi d’autres actifs financiers.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Politique monétaire}
+
+La politique monétaire vise à préserver la valeur de la monnaie en maintenant l’inflation à un niveau bas, stable et prévisible.  Le cadre de conduite de la politique monétaire canadienne s’appuie sur deux composantes principales qui fonctionnent de concert et se renforcent mutuellement : 
+\begin{itemize}
+\item la cible de maîtrise de l’inflation
+\item le taux de change flottant
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Politique monétaire}
+
+\begin{block}{Cible de maîtrise de l’inflation}
+\begin{itemize}
+\item La cible de maîtrise de l’inflation, qui est fixée à 2 \%, soit le point médian d’une fourchette qui va de 1 à 3 \%, constitue l’élément central du cadre de conduite de la politique monétaire du Canada
+\end{itemize}
+\end{block}
+
+\begin{block}{Taux de change flottant du Canada}
+\begin{itemize}
+\item Le taux de change flottant du Canada permet à la Banque de mener une politique monétaire indépendante, qui est bien adaptée à la conjoncture économique au pays et axée sur l’atteinte de la cible d’inflation. 
+\item Les variations du taux de change remplissent également un rôle d’amortisseur,  car elles aident l’économie à absorber les chocs externes et internes et à s’y ajuster.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\end{document}

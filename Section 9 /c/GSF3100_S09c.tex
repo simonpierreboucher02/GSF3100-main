@@ -1,0 +1,462 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usetheme{default}
+\usecolortheme{default}
+\usepackage{enumitem}
+
+\title[S10]{Section 9 : Gestion de portefeuille obligataire \\ $(3^{e}$ partie)}
+\subtitle{GSF-3100 Marché des capitaux}
+\author[SP. Boucher]{Simon-Pierre Boucher\inst{1}}
+\institute[Université Laval]
+{
+  \inst{1}%
+  Département de finance, assurance et immobilier\\
+  Faculté des sciences de l'administration\\
+  Université Laval}
+\date[Automne 2021]{Automne 2021}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+\section{Régimes de retraite}
+
+\begin{frame}{Régimes de retraite à prestations déterminées (PD)}
+\begin{itemize}[label=\bullet]
+\item Historiquement, les régimes de retraite à prestations déterminées (PD) étaient principalement gérés uniquement en gardant à l'esprit les actifs.
+\item L'hypothèse émise par les promoteurs était que si les actifs augmentaient comme l'indiquent les principaux indices du marché pour les différentes catégories d'actifs, ils seraient en quelque sorte suffisants à long terme pour satisfaire les obligations.
+\item Depuis l'adoption de la Loi sur la protection des régimes de retraite de 2006, les promoteurs de régimes de retraite à PD doivent désormais marquer leur passif projeté sur le marché en fonction des taux d'actualisation prescrits qui ont été introduits progressivement en 2012 (Liability-Driven Investing (LDI)).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Responsabilités d’un régime de retraite à prestation déterminé}
+\begin{itemize}[label=\bullet]
+\item Pour gérer efficacement les risques de responsabilité, nous commençons à examiner comment les passifs futurs d’un régime de retraite prestation déterminé sont projetés sur la durée de vie des participants.
+\item Les modalités du régime de retraite prestation déterminé  établissent les conditions d'acquisition des droits et le montant à verser aux participants à la retraite à différents âges.
+\item La prévision des passifs nécessite de faire des hypothèses sur le taux d'inflation et la durée de vie prévue des membres.
+\end{itemize}
+\end{frame}
+
+\section{Risques liés aux fonds de pension}
+
+\begin{frame}{Risques liés aux responsabilités des fonds de pension}
+Le passif projeté d’une caisse de retraite prestation déterminé comporte trois risques:
+\begin{itemize}[label=\bullet]
+\item le risque de taux d’intérêt,
+\item le risque d’inflation 
+\item le risque de longévité
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risques liés aux responsabilités des fonds de pension}
+\begin{block}{Le risque de taux d’intérêt}
+\begin{itemize}[label=\bullet]
+\item Le risque de taux d'intérêt des passifs projetés peut être quantifié de la même manière que pour les actifs: \textbf{calcul de la duration des passifs.} 
+\item Nous appelons cette durée la durée de la responsabilité.
+\item La durée du passif est importante dans la formulation d'une stratégie de LDI, car la couverture du risque de taux d'intérêt implique un appariement de la durée en dollars des actifs et des passifs.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Risques liés aux responsabilités des fonds de pension}
+\begin{block}{Le risque d'inflation}
+\begin{itemize}[label=\bullet]
+\item Le risque d'inflation pour un régime de retraite à prestation déterminé est le risque que le taux d'inflation réel subi au cours de la période de projection soit supérieur à celui présumé dans la projection du passif.
+\end{itemize}
+\end{block}
+\begin{block}{Le risque de longévité}
+\begin{itemize}[label=\bullet]
+\item Le risque de longévité pour un régime de retraite prestation déterminé est le risque que l'espérance de vie réelle des participants au régime au-delà de leur date de retraite dépasse l'espérance de vie présumée dans la projection du passif.
+\item Le montant qui devra effectivement être payé au participant au régime dépassera le montant projeté.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Le déficit de financement}
+\begin{itemize}[label=\bullet]
+\item Le déficit de financement est la différence entre la valeur marchande des actifs et la valeur des passifs.
+\end{itemize}
+\begin{align*}
+DF=PVP-MVA
+\end{align*}
+Où
+\begin{itemize}[label=\bullet]
+\item $DF=$ déficit de financement
+\item $PVP=$ Valeur projetée du passif
+\item $MVA=$ Valeur marchande de l'actif du fonds
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risque de déficit}
+\begin{itemize}[label=\bullet]
+\item Le risque de déficit de financement est le montant en dollars par lequel le déficit de financement augmentera en raison de changements défavorables dans les facteurs qui ont une incidence sur les actifs et les passifs.
+\item Qui comprennent les risques suivants:
+\begin{itemize}[label=\bullet]
+\item Taux d'intérêt
+\item Inflation
+\item Longévité
+\item Crédit
+\item liquidité
+\item devises
+\item remboursement anticipé
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Risque de déficit}
+\begin{itemize}[label=\bullet]
+\item La volatilité du déficit de financement dépend de la volatilité de ces facteurs de risque.
+\item Le problème avec la volatilité du déficit de financement est que les exigences réglementaires de financement peuvent exiger des cotisations supplémentaires de la part du promoteur du régime de retraite à prestation déterminé
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ratio de financement}
+\begin{itemize}[label=\bullet]
+\item Une autre façon d’évaluer la santé d’un régime de retraite à prestation déterminé consiste à examiner l’actif du régime en pourcentage de son passif projeté.
+\item Plus le ratio de financement est bas, plus le déficit de financement est grand.
+\end{itemize}
+\begin{align*}
+RF=\frac{MVA}{PVP}
+\end{align*}
+Où
+\begin{itemize}[label=\bullet]
+\item $RF=$ Ratio de financement
+\item $PVP=$ Valeur projetée du passif
+\item $MVA=$ Valeur marchande de l'actif du fonds
+\end{itemize}
+\end{frame}
+
+\section{Risque d'immunisation}
+\begin{frame}{Couverture du risque de taux d’intérêt}
+\begin{block}{Immunisation}
+\begin{itemize}[label=\bullet]
+\item L'immunisation est l'investissement des actifs de sorte qu'elle soit à l'abri d'un changement général du taux d'intérêt.
+\end{itemize}
+\end{block}
+\begin{block}{Immunisation pour une période}
+\begin{itemize}[label=\bullet]
+\item La stratégie d'immunisation à période unique n'est pas une stratégie utilisée par les régimes de retraite prestation déterminé  pour couvrir le risque de taux d'intérêt, car elle consiste à ne couvrir qu'un seul paiement de passif à l'avenir.
+\item La stratégie est utilisée par les compagnies d'assurance-vie pour couvrir le risque de taux d'intérêt d'un produit d'assurance populaire
+\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}{Risque d'immunisation}
+\begin{itemize}[label=\bullet]
+\item Le risque d'immunisation est le risque de réinvestissement.
+\item Le portefeuille qui présente le moins de risque de réinvestissement aura le moins de risque d'immunisation.
+\item Lorsqu'il existe une forte dispersion des flux de trésorerie autour de la date d'échéance du passif, le portefeuille est exposé à un risque de réinvestissement élevé
+\item Lorsque les flux de trésorerie sont concentrés autour de la date d'échéance du passif, comme dans le cas du portefeuille bullet, le portefeuille est soumis à un faible risque de réinvestissement.
+\end{itemize}
+\end{frame}
+\begin{frame}{Mesure du risque d'immunisation}
+L'objectif de la construction d'un portefeuille immunisé est donc de faire correspondre la durée du portefeuille à la durée du passif et de sélectionner le portefeuille qui minimise le risque d'immunisation $M^2$.
+
+\begin{align*}
+M^2=\frac{CF_1 (1-H)^2}{1+y}+\frac{CF_1 (2-H)^2}{(1+y)^2}+....+\frac{CF_1 (n-H)^2}{(1+y)^n}
+\end{align*}
+où 
+\begin{itemize}[label=\bullet]
+\item $CF_t =$ flux de trésorerie du portefeuille à la période t
+\item $H =$ durée (en années) de l'horizon d'investissement ou de la date d'échéance du passif
+\item $y =$ rendement du portefeuille 
+\item $n =$ délai de réception du dernier flux de trésorerie.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Durée de Macaulay}
+\begin{itemize}[label=\bullet]
+\item Supposons qu'un investisseur achète une obligation à coupon semestriel de $n$ ans pour $P_0$ au moment $0$ et la conserve jusqu'à l'échéance.
+\item Les montants des paiements qu'elle reçoit sont différents à des moments différents, une façon de résumer l'horizon est de considérer la moyenne pondérée du temps des flux de trésorerie.
+\item Nous utilisons les valeurs actuelles des flux de trésorerie (et non leurs valeurs nominales) pour calculer les pondérations.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Durée de Macaulay}
+\begin{itemize}[label=\bullet]
+\item Prenons un investissement qui génère des flux de trésorerie de montant $C_t$ au temps $t = 1, · · ·, n$,  mesurés en périodes de paiement. Supposons que le taux d'intérêt soit de $i$ par période de paiement et que l'investissement initial soit $P$.
+\item On note la valeur actuelle de $C_t$ par $PV(C_t)$, qui est donnée par
+\end{itemize}
+\begin{align*}
+PV(C_t)=\frac{C_t}{(1+i)^t}
+\end{align*}
+On peut donc avoir le prix de l'obligation comme suit:
+\begin{align*}
+P=\sum_{t=1}^n PV(C_t)
+\end{align*}
+\end{frame}
+
+
+\begin{frame}{Durée de Macaulay}
+\begin{itemize}[label=\bullet]
+\item En utilisant $PV(C_t)$ comme facteur de proportion, nous définissons la pondération moyenne du temps des flux de trésorerie, notée $D$
+\end{itemize}
+\begin{align*}
+\begin{split}
+D & =\sum_{t-1}^n t \left[ \frac{PV(C_t)}{P} \right]\\
+&=\sum_{t=1}^n tw_t
+\end{split}
+\end{align*}
+Où 
+\begin{align*}
+w_t=\frac{PV(C_t)}{P}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Stratégies d'immunisation}
+\begin{itemize}[label=\bullet]
+\item Les institutions financières sont souvent confrontées au problème de la prise en charge d'un passif d'un montant donné dans le futur.
+\item Nous considérons un passif de montant $V$ à payer $T$ périodes plus tard.
+\item Une stratégie simple pour répondre à cette obligation consiste à acheter un obligation à coupon de valeur nominale $V$, qui arrive à échéance au moment $T$
+\item Cette stratégie s'appelle l'appariement des flux de trésorerie
+\item Lorsque l'appariement des flux de trésorerie est adopté, l'obligation est toujours remplie, même en cas de fluctuation du taux d'intérêt
+\item Les obligations zéro-coupon de l'échéance requise peuvent ne pas être disponibles sur le marché.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Stratégies d'immunisation}
+\begin{itemize}[label=\bullet]
+\item L'immunisation est une stratégie de gestion d'un portefeuille d'actifs de manière à ce que l'entreprise soit à l'abri des fluctuations des taux d'intérêt
+\item Pour la situation simple ci-dessus, la stratégie d'immunisation à date cible peut être adoptée.
+\item Cela implique de détenir un portefeuille d'obligations dont la valeur s'accumulera jusqu'à $V$ au temps $T$ au taux d'intérêt actuel du marché.
+\item Le portefeuille doit cependant être construit de telle manière que sa durée de Macaulay $D$ soit égale à la date cible du passif $T$
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Stratégies d'immunisation}
+\begin{itemize}[label=\bullet]
+\item Supposons que le taux de rendement actuel soit $i$, la valeur actuelle du portefeuille d'obligations, notée $P(i)$, doit être
+\end{itemize}
+\begin{align*}
+P(i)=\frac{V}{(1+i)^T}
+\end{align*}
+\begin{itemize}[label=\bullet]
+\item Si le taux d'intérêt reste inchangé jusqu'au moment $T$,  ce portefeuille obligataire s'accumulera jusqu'à la valeur $V$, à la date d'échéance du passif.
+\item Si le taux d'intérêt augmente, le portefeuille d'obligations perdra de la valeur. Cependant, les paiements de coupons génèreront des intérêts plus élevés et compenseront cela.
+\item En revanche, si le taux d'intérêt baisse, la valeur du portefeuille obligataire augmente, avec un ralentissement ultérieur de l'accumulation des intérêts.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Stratégies d'immunisation}
+\begin{itemize}[label=\bullet]
+\item Dans les deux cas, comme nous le verrons, la valeur du portefeuille obligataire s’accumule finalement à $V$ au temps $T$, à condition que la duration Macaulay $D$ du portefeuille soit égale à $T$.
+\item Nous considérons la valeur de l'obligation pour un petit changement ponctuel du taux d'intérêt.
+\item Si le taux d'intérêt passe à $i + \Delta i$ immédiatement après l'achat de l'obligation, le prix de l'obligation devient $P(i + \Delta i)$ qui, au temps $T$, s'accumule à $P(i + \Delta i) (1 + i + \Delta i) T$ si le taux d'intérêt reste à $i + \Delta i$.
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}{Stratégies d'immunisation}
+\begin{itemize}
+\item Nous approchons $(1 + i + \Delta i) T$ au premier ordre de $\Delta i$ pour obtenir 
+\end{itemize}
+\begin{align*}
+(1+i+\Delta i)^T \approx (1+i)^T+T(1+i)^{T-1} \Delta i
+\end{align*}
+\begin{align*}
+P(i+\Delta i)(1+i+\Delta i)^T \approx P(i)(1-D^* \Delta i) \left[ (1+i)^T+T(1+i)^{T-1} \Delta i\right]
+\end{align*}
+Où 
+\begin{itemize}[label=\bullet]
+\item $D^*= \frac{D}{1+i}$
+\item $T=D$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Stratégies d'immunisation}
+\begin{align*}
+\begin{split}
+P(i+\Delta i)(1+i+\Delta i)^T & \approx P(i) \left[(1+i)^D-D^* \Delta i (1+i)^D+D(1+i)^{D-1} \Delta i\right] \\  &  =  P(i)(1+i)^D \\ &  = V
+\end{split}
+\end{align*}
+
+\end{frame}
+
+\begin{frame}{Exercice : énoncé}
+\begin{itemize}[label=\bullet]
+\item Une entreprise doit payer 100 millions de dollars dans 3,6761 ans. Le taux d'intérêt actuel du marché est de 5,5\%.  Vou savez que sur le marché il  y a l'obligation suivante de disponible.
+\item Obligation avec échéance de 4 ans avec un coupon de 6\% payable annuellement et offrant un rendement à l'échéance de 5,5\%.
+\item Démontrez la stratégie de financement que l'entreprise devrait adopter avec l'obligation. 
+\item Considérez les scénarios où il y a un changement immédiat et unique du taux d'intérêt à 5\% 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercice : Solution}
+\begin{landscape}
+\begin{table}[]
+\begin{tabular}{ccccc}
+\hline
+\multicolumn{1}{l}{\textbf{t}} & \multicolumn{1}{l}{\textbf{C_t}} & \multicolumn{1}{l}{\textbf{PV(C_t)}} & \multicolumn{1}{l}{\textbf{w_t}} & \multicolumn{1}{l}{\textbf{t w_t}} \\ \hline
+\textbf{1}                     & 6                                 & 5.6872                                & 0.0559                            & 0.0559                              \\
+\textbf{2}                     & 6                                 & 5.3907                                & 0.053                             & 0.106                               \\
+\textbf{3}                     & 6                                 & 5.1097                                & 0.0502                            & 0.1506                              \\
+\textbf{4}                     & 106                               & 85.565                                & 0.8409                            & 3.3636                              \\ \hline
+Total                          &                                   & 101.7526                              & 1                                 & 3.6761                              \\ \hline
+\end{tabular}
+\end{table}
+\end{landscape}
+\end{frame}
+
+\begin{frame}{Exercice : Solution}
+\begin{itemize}[label=\bullet]
+\item On trouve la Valeur présente du coupon reçu en $t=1$
+\begin{align*}
+PV(C_1)=\frac{6}{(1+0.055)^1}=5.6872 
+\end{align*}
+\item On trouve la Valeur présente du coupon reçu en $t=2$
+\begin{align*}
+PV(C_2)=\frac{6}{(1+0.055)^2}=5.3907
+\end{align*}
+\item On trouve la Valeur présente du coupon reçu en $t=3$
+\begin{align*}
+PV(C_3)=\frac{6}{(1+0.055)^3}=5.1097
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercice : Solution}
+\begin{itemize}[label=\bullet]
+\item On trouve la Valeur présente du coupon et de la valeur nominal reçu en $t=4$
+\begin{align*}
+PV(C_4)=\frac{100+6}{(1+0.055)^4}=85.565  
+\end{align*}
+\end{itemize}
+On peut donc avoir le prix de l'obligation comme suit:
+\begin{align*}
+P&=\sum_{t=1}^4 PV(C_t)\\
+&=PV(C_1)+PV(C_2)+PV(C_3)+PV(C_4) \\
+&= 5.6872 + 5.3907+5.1097+85.565 \\
+&=101.7526
+\end{align*}
+\end{frame}
+\begin{frame}{Exercice : Solution}
+On veut ensuite trouver les pondérations $w_t$ en utilisant l'équation suivante: 
+\begin{align*}
+w_t=\frac{PV(C_t)}{P}
+\end{align*}
+\begin{itemize}[label=\bullet]
+\item On trouve $w_1$
+\begin{align*}
+w_1=\frac{PV(C_1)}{P}=\frac{5.6872 }{101.7526}=0.0559                           
+\end{align*} 
+\item On trouve $w_2$
+\begin{align*}
+w_2=\frac{PV(C_2)}{P}=\frac{5.3907}{101.7526}=0.053                                          
+\end{align*} 
+\end{itemize}
+\end{frame}
+\begin{frame}{Exercice : Solution}
+\begin{itemize}[label=\bullet]
+\item On trouve $w_3$
+\begin{align*}
+w_3=\frac{PV(C_3)}{P}=\frac{5.1097 }{101.7526}=0.0502                                             
+\end{align*} 
+\item On trouve $w_4$
+\begin{align*}
+w_4=\frac{PV(C_4)}{P}=\frac{85.565}{101.7526}=0.8409                                                     
+\end{align*} 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercice : Solution}
+\begin{itemize}[label=\bullet]
+\item Par la suite, on trouve $tw_t$
+\begin{align*}
+t \times w_1=1 \times w_1 =1 \times 0.0559 = 0.0559                                       
+\end{align*} 
+\begin{align*}
+t \times w_2= 2 \times w_2 =2 \times 0.053  = 0.106                                
+\end{align*} 
+\begin{align*}
+t \times w_3= 3 \times w_3 =3 \times 0.0502 = 0.1506                             
+\end{align*} 
+\begin{align*}
+t \times w_4= 4 \times w_4 =4 \times 0.8409  = 3.6761                           
+\end{align*} 
+\end{itemize}
+\end{frame}
+\begin{frame}{Exercice : Solution}
+Nous avons tous les variables nécessaires afin de trouver la durée de macaulay 
+\begin{align*}
+\begin{split}
+D & =\sum_{t=1}^4 t \left[ \frac{PV(C_t)}{P} \right]\\
+&=\sum_{t=1}^4 tw_t \\
+&=1 \times w_1+2 \times w_2+ 3 \times w_3+4 \times w_4= 3.6761     
+\end{split}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Exercice : Solution}
+\begin{itemize}[label=\bullet]
+\item La valeur actuelle de l'obligation devrait être
+\begin{align*}
+\frac{100 000 000\$}{(1.055)^{3.6761}}=82 133 800\$
+\end{align*}
+\item Le prix de l'obligation est de 101,7526\% de la valeur nominale et la duration de Macaulay est de 3,6761 années,  date cible du paiement.
+\item l'obligation achetée doit avoir une valeur nominale de
+\begin{align*}
+\frac{82 133 800\$}{1.017526}=80 719 100\$
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercice : Solution}
+\begin{itemize}[label=\bullet]
+\item À la fin de l'année 3, la valeur cumulée des paiements de coupon est
+\begin{align*}
+&C_1 (1.055)^2+C_2 (1.055)^1+C_3 (1.055) \\
+&= (80 719 100\$ \times 0.06)(1.055)^2+(80 719 100\$ \times 0.06)(1.055)^1\\
+&+(80 719 100\$ \times 0.06) \\
+&= 15 343 200 \$
+\end{align*}
+\item Et le prix de l'obligation est (l'obligation arrivera à échéance dans 1 an avec un paiement de coupon de 6\% et un remboursement de 80 719 100\$)
+\begin{align*}
+\frac{80 719 100\$ \times 0.06+80 719 100\$}{1.055}=81 101 700 \$
+\end{align*}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Exercice : Solution}
+\begin{itemize}[label=\bullet]
+\item Ainsi, le prix de l'obligation plus les valeurs des coupons accumulés au temps 3,6761 ans est
+\begin{align*}
+(81 101 700 \$+15 343 200 \$)(1.055)^{0.6761}=100 000 000\$
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercice : Solution}
+\begin{itemize}[label=\bullet]
+\item Supposons que le taux d'intérêt tombe à 5\% immédiatement après l'achat de l'obligation, la valeur du coupon accumulé 3 ans plus tard est
+\begin{align*}
+&C_1 (1.05)^2+C_2 (1.05)^1+C_3 (1.05) \\
+&= (80 719 100\$ \times 0.06)(1.05)^2+(80 719 100\$ \times 0.06)(1.05)^1\\
+&+(80 719 100\$ \times 0.06)(1.05) \\
+&= 15 268 000 \$
+\end{align*}
+\item Et le prix de l'obligation est
+\begin{align*}
+\frac{80 719 100\$ \times 0.06+80 719 100\$}{1.05}=81 487 000 \$
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exercice : Solution}
+\begin{itemize}[label=\bullet]
+\item Le total de la valeur de l'obligation et des paiements de coupon accumulés après 3,6761 années est
+\end{itemize}
+\begin{align*}
+(81 487 000 \$+15 268 000 \$)(1.05)^{0.6761}=100 000 000\$
+\end{align*}
+\end{frame}
+
+\end{document}

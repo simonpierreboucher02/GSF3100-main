@@ -1,0 +1,347 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetheme{default}
+
+\usecolortheme{default}
+
+\title[S04 Taux d'intérêt]{Section 04 : Structure des taux d’intérêt}
+\subtitle{GSF-3100 Marché des capitaux}
+\author[SP. Boucher]{Simon-Pierre Boucher\inst{1}}
+\institute[Université Laval]
+{
+  \inst{1}%
+  Département de finance, assurance et immobilier\\
+  Faculté des sciences de l'administration\\
+  Université Laval}
+\date[Automne 2021]{Automne 2021}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Relation risque-rendement}
+\begin{itemize}
+\item Un des principes les plus fondamental en finance est qu'un actif qui est perçu comme étant plus risqué,  devra forcément offrir un rendement plus élevé. 
+\item Le taux de rendement d’une obligation devrait donc refléter son risque. 
+\item Nous allons nous concentrer sur le risque d'échéance.
+\begin{itemize}
+\item Si le risque d’un flux monétaire change en fonction de son échéance,  alors le taux d’actualisation devrait aussi changer selon l’échéance.
+\end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{Composantes du taux de rendement}
+Nous allons maintenant séparer le taux de rendement d'une obligation en deux composantes,  soit le taux de rendement de référence et la prime de risque.
+
+\begin{enumerate}
+\item Taux de rendement de référence (base interest rate): Taux que l’on pourrait obtenir sur un titre autrement identique mais sans risque.
+\begin{itemize}
+\item Marché domestique: Titres du gouvernement du Canada;
+\item Marchés internationaux: Bons du Trésor américain;
+\item Peut aussi être choisi pour isoler un risque particulier.
+\end{itemize}
+\item Prime de risque (risk premium) ou écart de taux (yield spread): Prime de rendement qui reflète le risque de l’obligation.
+\end{enumerate}
+\end{frame}
+\begin{frame}{Mesures de la prime de risque}
+On peut mesurer la prime de risque de trois façons suivante:
+\begin{enumerate}
+\item Prime de risque 
+\begin{align*}
+y^{obl}-y^{ref}
+\end{align*}
+\item Prime de risque relative
+\begin{align*}
+\frac{y^{obl}-y^{ref}}{y^{ref}}
+\end{align*}
+\item Ratio de taux
+\begin{align*}
+\frac{y^{obl}}{y^{ref}}
+\end{align*}
+\end{enumerate}
+où 
+\begin{itemize}
+\item $y^{obl}=$ rendement de notre obligation
+\item $y^{ref}=$ rendement sans risque
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Courbe des rendements à l’échéance}
+\begin{itemize}
+\item La courbe des rendements à l'échéance est une représentation graphique nous permettant de voir le risque d'une obligation en terme d'échéance.
+\item Cela nous permet de voir la relation qui existe entre les taux de rendement de plusieurs obligations ayant un risque de crédit similaire et leur échéance.  
+\item Historiquement,  la courbe des rendements à l’échéance est croissante plutôt que décroissante.
+\begin{itemize}
+\item Lorsque l'économie se porte bien,  la présence d'une courbe des rendements à l’échéance croissante est encore plus probable. 
+\end{itemize}
+\item Plus l’échéance est éloignée,  plus l’obligation est volatile et donc plus le taux de rendement exigé devrait être élevé.  
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Courbe des rendements à l’échéance}
+\begin{itemize}
+\item La courbe des rendements à l'échéance est souvent utilisée pour déterminer le taux de rendement permettant d’évaluer la valeur théorique d’une obligation non incluse dans la courbe. 
+\item Il s'agit d'une méthode problématique étant donnée que des obligations ayant la même échéance peuvent avoir des taux de coupons différents.
+\begin{itemize}
+\item Sachant qu'une obligation ayant un taux de coupon plus élevé est moins volatile. 
+\item Il s'agit donc d'une obligation avec un risque plus faible et par le fait même une obligaiton qui offre plus petit rendement.  
+\item On peut donc avoir deux obligations de même échéance,  avec des rendements qui diffèrent.
+\end{itemize}
+\item Une  façon de rendre la courbe des rendements à l'échéance robuste,  est de construire une courbe basée sur des obligations ayant le même taux de coupon.
+\end{itemize}
+\end{frame}
+\begin{frame}{Taux de rendement au comptant}
+\begin{itemize}
+\item Le taux de rendement au comptant $z_t$ est le taux d’une obligation à escompte pure d’échéance $t$ périodes. 
+\item Le taux est appelé également spot rate.  
+\item Il n’existe pas d’obligations à escompte pure pour toutes les échéances. 
+\begin{itemize}
+\item  Les taux de rendement au comptant sont construits à l’aide d’une théorie simplificatrice.\end{itemize} 
+\end{itemize}
+\end{frame}
+\begin{frame}{Structure à terme des taux d’intérêt}
+\begin{itemize}
+\item La structure à terme des taux d'intérêts représente l'ensemble des taux de rendement au comptant pour différentes échéances ($z_t$). 
+\item En utilisant cette stucture,  il nous sera possible de construire la courbe théorique des rendements au comptant à l’échéance. 
+\item La représentation des $z_t$ dans la courbe devra utiliser un taux nominale annuel.
+\end{itemize}
+\end{frame}
+\begin{frame}{Construction des $z_t$}
+\begin{itemize}
+\item On sait déja qu'une obligation réguilière est composé de flux monétaires $(FM)$. 
+\item Si nous supposons que chaque flux monétare d'une obligations régulières sont prisent individuellement,  il est possible de dire qu'une obligation régulière est équivalent à plusieurs obligations zéro-coupon. 
+\item Chaque flux monétaire représentera un obligation zéro-coupon et le flux monétaire en question sera le proxy de la veleur à échéance $M$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Construction des $z_t$}
+Selon la théorie de l’absence d’arbitrage, la valeur de l’obligation à coupons devrait être égale à la somme de la valeur des obligations à escompte pure:
+\begin{align*}
+P=\frac{C}{(1+z_1)^1}+\frac{C}{(1+z_2)^2}+\frac{C}{(1+z_3)^3}+...+\frac{C}{(1+z_n)^n}+\frac{M}{(1+z_n)^{n}}
+\end{align*}
+\begin{itemize}
+\item En supposant qu’il y a absence d’arbitrage,  il est possible de résoudre l’équation précédente afin de trouver les valeurs de $z_1, z_2, z_3,...,z_n$.  
+\item Pour trouver les taux au comptant pour toutes les échéances,  il faut procéder à l’aide d’une méthode récursive (bootstrapping method). 
+\item S’il manque des échéances, il faut utiliser une technique de lissage, telle que l’interpolation linéaire, pour déterminer les taux manquants.
+\end{itemize}
+\end{frame}
+\begin{frame}{Courbe des rendements à l’échéance au pair}
+\begin{itemize}
+\item Courbe des rendements à l’échéance utilisant des obligations de référence ayant été transformées pour être évaluées au pair.  
+\item Cette courbe est utilisée en pratique à la place de la courbe des rendements à l’échéance pour réduire l’effet du taux de coupon.
+\item Pour chaque échéance $n$,  cette courbe utilise le taux de coupon correspondant au coupon $C$ déterminé à l’aide de l’équation suivante:
+\end{itemize}
+\begin{align*}
+M=\sum_{t=1}^n \left[ \frac{C}{(1+z_t)^t} \right]+\frac{M}{(1+z_n)^{n}}
+\end{align*}
+\begin{itemize}
+\item On peut donc voir que pour la courbe des rendements à l’échéance au pair on replace dans la formule le prix de l'obligation $P$ par la valeur à l'échéance $M$.
+\end{itemize}
+\end{frame}
+\begin{frame}{Taux de rendement à terme}
+\begin{itemize}
+\item $f_{t,n}$ représente le taux de rendement à terme pour une échéance de $n$ périodes à compter de la période $t$.  
+\item Le taux de rendement à terme est le taux de rendement (effectif par période) implicite entre les périodes $t$ et $t+n$ étant donné les taux de rendement au comptant pour les échéances t et t+n périodes,  $z_t$ et $z_{t+n}$.
+\item Les taux de rendement à terme représentent les taux de rendement au comptant futurs extraits des taux de rendement au comptant actuels.
+\end{itemize}
+\end{frame}
+\begin{frame}{Trouver $f_{t,n}$}
+Le taux de rendement à terme $t_{f,n}$ est le taux qui rend un investisseur indifférent entre les deux situations suivantes:
+\begin{itemize}
+\item Investir de $0$ à $t+n$ à $z_{t+n}$
+\item Investir de $0$ à $t$ à $z_t$ et de $t$ à $t+n$ à $f_{t,n}$
+\end{itemize}
+Grâce à cette dernière hypothèse, on peut poser la formule suivante
+\begin{align*}
+(1+z_{t+n})^{t+n}=(1+z_t)^t \times (1+f_{t,n})^n
+\end{align*}
+\begin{itemize}
+\item L’investisseur se sert de son anticipation du taux au comptant d’échéance $n$ périodes au temps $t$,  $E(z_n)$,  par rapport au taux à terme $f_{t,n}$,  pour décider s’il doit investir jusqu’à $t$ au taux $z_t$ ou jusqu’à $t+n$ au taux $z_{t+n}$.  
+\item  Il peut,  entre autre,  se garantir un taux $f_{t,n}$ en empruntant à $z_t$ pour investir à $z_{t+n}$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Exemple 1}
+Les deux investissements suivants sont équivalents
+\begin{itemize}
+\item Investir pendant 4 périodes à un taux au comptant $z_4$
+\item La combinaison suivante
+\begin{itemize}
+\item Investir pendant 1 période à un taux au comptant $z_1$
+\item Investir pendant 1 période dans 1 période au taux à terme $f_{1,1}$
+\item Investir pendant 1 période dans 2 périodes au taux à terme $f_{2,1}$
+\item Investir pendant 1 période dans 3 périodes au taux à terme $f_{3,1}$
+\end{itemize}
+\end{itemize}
+\begin{align*}
+(1+z_4)^4=(1+z_1) \times (1+f_{1,1}) \times (1+f_{2,1}) \times (1+f_{3,1})
+\end{align*}
+\end{frame}
+
+\begin{frame}{Exemple 2}
+Les deux investissements suivants sont équivalents
+\begin{itemize}
+\item Investir pendant 4 périodes à un taux au comptant $z_4$
+\item La combinaison suivante
+\begin{itemize}
+\item Investir pendant 1 période à un taux au comptant $z_1$
+\item Investir pendant 2 périodes dans 1 période au taux à terme $f_{2,1}$
+\item Investir pendant 1 période dans 3 périodes au taux à terme $f_{3,1}$
+\end{itemize}
+\end{itemize}
+\begin{align*}
+(1+z_4)^4=(1+z_1) \times (1+f_{1,2})^2 \times (1+f_{3,1})
+\end{align*}
+\end{frame}
+
+\begin{frame}{Exemple 3}
+Les deux investissements suivants sont équivalents
+\begin{itemize}
+\item Investir pendant 4 périodes à un taux au comptant $z_4$
+\item La combinaison suivante
+\begin{itemize}
+\item Investir pendant 1 période à un taux au comptant $z_1$
+\item Investir pendant 1 période dans 1 période au taux à terme $f_{1,1}$
+\item Investir pendant 2 périodes dans 2 périodes au taux à terme $f_{2,2}$
+\end{itemize}
+\end{itemize}
+\begin{align*}
+(1+z_4)^4=(1+z_1) \times (1+f_{1,1}) \times (1+f_{2,2})^2
+\end{align*}
+\end{frame}
+
+\begin{frame}{Exemple 4}
+Les deux investissements suivants sont équivalents
+\begin{itemize}
+\item Investir pendant 4 périodes à un taux au comptant $z_4$
+\item La combinaison suivante
+\begin{itemize}
+\item Investir pendant 2 périodes à un taux au comptant $z_2$
+\item Investir pendant 1 période dans 2 périodes au taux à terme $f_{2,1}$
+\item Investir pendant 1 période dans 3 périodes au taux à terme $f_{3,1}$
+\end{itemize}
+\end{itemize}
+\begin{align*}
+(1+z_4)^4=(1+z_2)^2 \times (1+f_{2,1}) \times (1+f_{3,1})
+\end{align*}
+\end{frame}
+
+
+\begin{frame}{Formes de la structure à terme des taux}
+\begin{itemize}
+\item Plusieurs théories ont été mit de l'avant pour essayer d'expliquer la forme de la structure à terme des taux à travers le temps. 
+\item Historiquement,  les trois formes suivantes ont été observées.
+\begin{itemize}
+\item Croissante ou normale
+\item Décroissante ou inversée
+\item Horizontale ou plate
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Théorie des anticipations pures}
+\begin{itemize}
+\item La théorie des anticipations pures montre que les taux de rendement à terme sont des estimateurs non biaisés des taux au comptant leur étant associés dans le futur. 
+\item De façon simple, on peut imaginer un monde avec 2 périodes. La première période allant de $t=0$ à $t=1$ et la deuxième période allant de $t=1$ à $t=2$.
+\item Si on pose l'hypothèse que la structure à terme est croissante,  alors le rendement que je vais avoir en achetant une obligation en $t=0$ et venant à échéance en $t=1$ sera plus faible que le rendement obtenu avec une obligation achetée en $t=0$ et venant à échéance en $t=2$.  
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Théorie des anticipations pures}
+\begin{itemize}
+\item Le taux d'une obligation achetée en $t=0$ et venant à échéance en $t=1$ est représenté par $z_{1}$,  alors que le taux d'une obligation achetée en $t=0$ et venant à échéance en $t=2$ est représenté par $z_{2}$. 
+\item De plus, nous allons représenter le taux future d'une obligation qui serait achetée en $t=1$ et qui viendrait à échéance en $t=2$ par $E_0(z_{1,1})$.  
+\item On peut dire que $E_0(z_{1,1})$ représente l'anticipation en $t=0$ du taux qui sera en vigueur dans une période et ce pour une période. 
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Théorie des anticipations pures}
+Afin d'éviter la présence d'arbitrage, il doit y avoir un taux de rendement à terme $f_{1,1}$ qui rend l'équation suivante vrai.
+\begin{align*}
+(1+z_2)^2=(1+z_1) \times (1+f_{1,1})
+\end{align*}
+On peut donc exprimer $f_{1,1}$ en fonction de $z_1$ et $z_2$ de la façon suivante.
+\begin{align*}
+f_{1,1}=\frac{(1+z_2)^2}{(1+z_1)}-1
+\end{align*}
+\end{frame}
+
+\begin{frame}{Théorie des anticipations pures}
+En appliquant la définition de la théorie des anticipations pures à notre monde composé de 2 périodes, on arrive à l'énoncé: \\
+\vspace{0.5cm}
+ \textbf{La théorie des anticipations pures montre que le taux de rendement à terme $f_{1,1}$ est un estimateur non biaisés du taux au comptant $z_{1,1}$ lui étant associés dans le futur. }\\
+ \vspace{0.5cm}
+Ce dernier énoncé peut être représenté par l'équation suivante:
+\begin{align*}
+E_0(z_{1,1})=f_{1,1}=\frac{(1+z_2)^2}{(1+z_1)}-1
+\end{align*}
+\end{frame}
+
+\begin{frame}{Théorie des anticipations pures}
+\begin{itemize}
+\item Dans la théorie des anticipations pures, les agents sont neutres face au risque et la structure à terme des taux d’intérêt reflète simplement les anticipations du marché quant aux taux au comptant à venir. 
+\item Voici maintenant,  les propriétés de cette théorie.
+\begin{itemize}
+\item  Forme croissante $\rightarrow$ hausse future de $z_t$
+\item Forme décroissante $\rightarrow$ baisse future de $z_t$
+\item Forme horizontale $\rightarrow$ stabilité future de $z_t$
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Théorie de la prime de liquidité}
+\begin{itemize}
+\item La théorie de la prime de liquidité nous dit que le taux de rendement à terme est égal au taux de rendement au comptant anticipé pour la période correspondante auquel on ajoute une prime de liquidité qui augmente avec l’échéance.  
+\item Si nous reprenons l'example de la théorie précédente.
+\end{itemize}
+\begin{align*}
+(1+z_2)^2>(1+z_1) \times (1+f_{1,1})
+\end{align*}
+\begin{itemize}
+\item Vous aurez remarqué qu'à la place d'une égalité, nous avons une inégalité.  
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Théorie de la prime de liquidité}
+\begin{block}{Théorie des anticipations pures}
+\begin{itemize}
+\item Selon la théorie des anticipations pures  il y aura possibilité d'arbitrage en achetant un portefeuille payant un taux $z_2$ chaque années pendant deux ans et vendant un portefeuille payant un taux $z_1$ la première année et un taux $f_{1,1}$ la deuxième année. 
+\end{itemize}
+\end{block}
+\begin{block}{Théorie de la prime de liquidité}
+\begin{itemize}
+\item La théorie de la prime de liquidité dirait qu'il ne s'agit pas nécessairement d'une opportunité d'arbitrage étant donnée que le portefeuille payant un taux $z_2$ représente un plus grand risque de liquidité. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Théorie de la prime de liquidité}
+\begin{itemize}
+\item Sachant que le risque doit être rénuméré,  il est normal qu'il offre un rendement supérieur.  
+\item dans cette théorie,  les agents sont averses au risque et préfèrent les placements à court terme (plus liquides et moins volatils) aux placements à long terme. 
+\item La structure à terme des taux d’intérêt reflète les anticipations du marché quant aux taux au comptant à venir ainsi que la prime de liquidité.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Théorie de la segmentation du marché}
+\begin{itemize}
+\item Dans la théorie de la segmentation du marché la forme de la courbe est déterminée par l’offre et la demande des titres financiers pour chaque échéance.  
+\item Les agents ont des horizons bien définis et n’ont aucune préférence pour les taux d’échéances autres que leurs horizons. 
+\item La détermination des taux à court terme est indépendante de celle des taux à long terme puisque le marché à court terme est segmenté du marché à long terme.
+\end{itemize}
+\end{frame}
+\begin{frame}{Théorie des habitats préférés}
+\begin{itemize}
+\item La théorie des habitats préférés est une combinaison de la théorie de la prime de liquidité et de la théorie de la segmentation du marché. 
+\item Cette théorie suppose qu'il existe des primes de liquidité.
+\item Puisque le marché est partiellement segmenté,  celles-ci ne sont pas nécessairement une fonction croissante de l’échéance.
+\item Les agents sont prêts à sortir de leur habitat préféré si on leur offre une prime de liquidité suffisante.
+\end{itemize}
+\end{frame}
+\end{document}

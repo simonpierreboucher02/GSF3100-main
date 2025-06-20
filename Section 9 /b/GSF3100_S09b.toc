@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Analyse Moyenne-Variance}{2}{0}{1}
+\beamer@sectionintoc {2}{Variance du portefeuille}{5}{0}{2}
+\beamer@sectionintoc {3}{Stratégies d’immunisation}{11}{0}{3}
+\beamer@sectionintoc {4}{Gestion guidée par les engagements}{14}{0}{4}
+\beamer@sectionintoc {5}{Processus d'appariement des flux de trésorerie}{18}{0}{5}

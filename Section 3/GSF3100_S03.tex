@@ -1,0 +1,404 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetheme{default}
+
+\usecolortheme{default}
+
+\title[S03 Volatilité]{Section 03 : Volatilité dans le marché obligataire}
+\subtitle{GSF-3100 Marché des capitaux}
+\author[SP. Boucher]{Simon-Pierre Boucher\inst{1}}
+\institute[Université Laval]
+{
+  \inst{1}%
+  Département de finance, assurance et immobilier\\
+  Faculté des sciences de l'administration\\
+  Université Laval}
+\date[Automne 2021]{Automne 2021}
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\tableofcontents
+%\end{frame}
+
+\begin{frame}{Propriétés reliées à la volatilité}
+\begin{itemize}
+\item Les changements de prix en pourcentage d'une obligation dépendent grandement du type d'obligation. 
+\item Petit changement dans le rendement requis sur une obligation 
+\begin{itemize}
+\item Changement en pourcentage du prix d'une obligation est similaire pour une hausse et une baisse de taux.
+\end{itemize}
+\item Grand changement dans le rendement requis sur une obligation 
+\begin{itemize}
+\item Changement en pourcentage du prix d'une obligation est différente pour une hausse et une baisse de taux.
+\end{itemize}
+\item Pour un grand changement dans le rendement requis 
+\begin{itemize}
+\item $\downarrow$ taux $=$ $\uparrow$ prix $=$ plus grande
+\item $\uparrow$ taux $=$ $\downarrow$ prix $=$ plus faible
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Caractéristiques affectant la volatilité}
+\begin{enumerate}
+\item Taux de coupon 
+\begin{center}
+$TC \downarrow$ \hspace{1cm} $\Longleftrightarrow$  \hspace{1cm} Volatilité $\uparrow$
+\end{center}
+\begin{center}
+$TC \uparrow$ \hspace{1cm} $\Longleftrightarrow$  \hspace{1cm} Volatilité $\downarrow$
+\end{center}
+\item Échéance
+\begin{center}
+$n \uparrow$ \hspace{1cm} $\Longleftrightarrow$  \hspace{1cm} Volatilité $\uparrow$
+\end{center}
+\begin{center}
+$n \downarrow$ \hspace{1cm} $\Longleftrightarrow$  \hspace{1cm} Volatilité $\downarrow$
+\end{center}
+\item Taux de rendement 
+\begin{center}
+$r \uparrow$ \hspace{1cm} $\Longleftrightarrow$  \hspace{1cm} Volatilité $\downarrow$
+\end{center}
+\begin{center}
+$r \downarrow$ \hspace{1cm} $\Longleftrightarrow$  \hspace{1cm} Volatilité $\uparrow$
+\end{center}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Anticipation sur les taux d'intérêts}
+
+Si un investisseur anticipe une baisse des taux d'intérêts,  il est préférable qu'il ajuste son portefeuille d'obligations pour avoir les caractéristiques suivantes.
+\begin{itemize}
+\item Faible taux de coupon
+\item Longue échéance 
+\item Faible taux de rendement 
+\end{itemize}
+Si un investisseur anticipe une hausse des taux d'intérêts, il est préférable qu'il ajuste son portefeuille d'obligations pour avoir les caractéristiques suivantes.
+\begin{itemize}
+\item Taux de coupon élevé
+\item Courte échéance 
+\item Taux de rendement élevé
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Mesures de la volatilité}
+\begin{block}{Prix d’un point de base}
+Cette mesure nous dit quel est le changement en dollar du prix d'une obligation suite à un changement d'un point de base du taux de rendement requis.
+\begin{itemize}
+\item Un point de base est équivalent à $0.01\%$
+\item Si la variation en dollar est grande suite à une variation d'un point de base du rendement, on peut dire que cette obligation est plus volatile.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Mesures de la volatilité}
+\begin{block}{Valeur en rendement d’une variation de prix}
+Cette mesure nous dit quel est le changement dans le rendement d'une obligation suite à une variation de prix donnée.  
+\begin{itemize}
+\item La variation de prix reflète le changement minimal dans la cote du marché: 
+\begin{itemize}
+\item Marché obligataire gouvernemental américain: $\frac{1}{32}$
+\item Marchés corporatif et municipal: $\frac{1}{8}$
+\end{itemize}
+\item Si la variation du rendement est grande suite à une variation de prix donnée, on peut dire que cette obligation est moins volatile.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+
+\begin{frame}{Mesures de la volatilité}
+\begin{block}{Durée}
+La durée ($D$) est une mesure de volatilité qu'il est possible de trouver en prenant la dérivé première de  la fonction de prix de l'obligation par rapport au rendement. 
+\begin{align*}
+D=\frac{\partial P}{\partial y}
+\end{align*}
+Nous allons définir notre fonction de prix comme suit:
+\begin{align*}
+P=\frac{C}{1+y}+\frac{C}{(1+y)^2}+...+\frac{C}{(1+y)^n}+\frac{M}{(1+y)^n}
+\end{align*}
+Afin de faciliter la dérivé première, nous allons modifier notre fonction de prix afin davoir les exposants au numérateur.
+\begin{align*}
+P=C \times (1+y)^{-1}+...+C \times (1+y)^{-n}+M \times (1+y)^{-n}
+\end{align*}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Mesures de la volatilité}
+\begin{block}{Durée}
+On effectue maintenant la dérivé première.
+\begin{align*}
+\frac{\partial P}{\partial y}=-C \times (1+y)^{-2}-2C \times (1+y)^{-3}-...\\-nC \times (1+y)^{-(n+1)}-nM \times (1+y)^{-(n+1)}
+\end{align*}
+\begin{align*}
+\frac{\partial P}{\partial y}=\frac{-C}{(1+y)^2}+\frac{-2C}{(1+y)^3}+...+\frac{-nC}{(1+y)^{(n+1)}}+\frac{-nM}{(1+y)^{(n+1)}}
+\end{align*}
+\begin{align*}
+\frac{\partial P}{\partial y}= \frac{-1}{1+y} \times \left[ \frac{C}{(1+y)^1}+\frac{2C}{(1+y)^2}+...+\frac{nC}{(1+y)^{n}}+\frac{nM}{(1+y)^{n}} \right]
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Mesures de la volatilité}
+\begin{block}{Durée}
+En divisant par $P$, on obtient la variation du prix en \% due à une petite variation du rendement.
+\begin{align*}
+\frac{\partial P}{\partial y} \times \frac{1}{P}=\frac{\partial P/P}{\partial y} 
+\end{align*}
+\begin{align*}
+\frac{\partial P/P}{\partial y} = \frac{-1}{1+y} \times \frac{\frac{C}{(1+y)^1}+\frac{2C}{(1+y)^2}+...+\frac{nC}{(1+y)^{n}}+\frac{nM}{(1+y)^{n}}}{P}
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Mesures de durée}
+Deux mesures de durée ont été développées à partir de cette dérivée: 
+\begin{enumerate}
+\item Durée de Macaulay
+\item Durée modifiée
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Mesures de durée}
+\begin{block}{Durée de macaulay}
+La durée de macaulay ($D$) peut être calculée à l'aide de l'équation suivante.
+\begin{align*}
+D=\frac{\frac{C}{(1+y)^1}+\frac{2C}{(1+y)^2}+...+\frac{nC}{(1+y)^{n}}+\frac{nM}{(1+y)^{n}}}{P}
+\end{align*}
+\begin{align*}
+D=\sum_{t=1}^nw_t t
+\end{align*}
+où $w_t=\frac{FM_t (1+y)^{-t}}{P}$\\
+La durée de macaulay ($D$) représente la moyenne pondérée des échéances $t$ des flux monétaires $FM_t$, où chaque pondération correspond à la contribution au prix de l’obligation $P$ du flux monétaire.
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Mesures de durée}
+\begin{block}{Durée de modifiée}
+La durée modifiée est simplement une transformation de la durée de macaulay. On peut donc exprimer la durée modifiée comme étant une fonction de la durée de macaulay.
+\begin{align*}
+D_m=\frac{D}{1+y}=-\frac{\partial P/P}{\partial y}
+\end{align*}
+\begin{itemize}
+\item La durée modifiée est reliée à une variation du prix en pourcentage due à une petite variation du taux de rendement.  
+\item Le signe négatif rappelle qu’il existe une relation inverse entre le prix et le taux de rendement.  
+\item La durée modifiée est une meilleure mesure de la volatilité que la durée de Macaulay. 
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Mesures de durée}
+\begin{block}{Durée de modifiée}
+On peut également exprimer la durée modifiée en deux parties:
+\begin{itemize}
+\item terme de coupon 
+\item terme de valeur nominale
+\end{itemize}
+\begin{align*}
+D_m=\frac{\frac{C}{y^2} \left[ 1-\frac{1}{(1+y)^n} \right]+\frac{n(M-C/y)}{(1+y)^{n+1}}}{P}
+\end{align*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Propriétés de la durée}
+De façon générale,  la durée de macaulay est toujours plus petite ou égale au temps avant l'échéance de notre obligation. 
+\begin{align*}
+D \le n
+\end{align*}
+Pour ce qui est de la durée modifiée, elle est toujours strictement inférieure au temps avant l'échéance de notre obligation. 
+\begin{align*}
+D_m < n 
+\end{align*}
+Par contre, si le taux de coupon est de 0 $(TC=0)$,  c'est à dire que nous avons une obligation zéro-coupon, alors la durée de macaulay  est égale au temps avant l'échéance de notre obligation et la durée modifiée est strictement inférieure au temps avant l'échéance de notre obligation.
+\begin{align*}
+D=n 
+\end{align*}
+\end{frame}
+
+\begin{frame}{Propriétés de la durée}
+En gardant les paramètres de notre obligation constants,  on peut poser les propriétés suivantes.
+\begin{itemize}
+\item Une hausse du taux de coupon et par le fait même du coupon lui même, entrainera une baisse de la durée de macaulay et de la durée modifiée.
+\begin{align*}
+\uparrow TC \hspace{1cm} \Longleftrightarrow \hspace{1cm} \downarrow D 
+\end{align*}
+\begin{align*}
+\uparrow TC \hspace{1cm} \Longleftrightarrow \hspace{1cm} \downarrow D_m 
+\end{align*}
+\item Une augmentation du temps avant l'échéance, entrainera normalement une augmentation de la durée de macaulay et de la durée modifiée.
+\begin{align*}
+\uparrow n \hspace{1cm} \Longleftrightarrow \hspace{1cm} \uparrow D 
+\end{align*}
+\begin{align*}
+\uparrow n \hspace{1cm} \Longleftrightarrow \hspace{1cm} \uparrow D_m 
+\end{align*}
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Propriétés de la durée}
+\begin{itemize}
+\item Une hausse du rendement requis entrainera une baisse de la durée de macaulay et de la durée modifiée.
+\begin{align*}
+\uparrow y \hspace{1cm} \Longleftrightarrow \hspace{1cm} \downarrow D 
+\end{align*}
+\begin{align*}
+\uparrow y \hspace{1cm} \Longleftrightarrow \hspace{1cm} \downarrow D_m 
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Approximation de la variation de prix}
+\begin{itemize}
+\item Un aspect interessant de la durée modifiée est qu'elle nous permet d'approximer la variation en dollar du prix d'une obligation. 
+\item Nous allons représenter une variation de prix en dollar par $\Delta P$ et non $\partial P$.
+\item En effet, $\partial$ représente un changement infinitésimal du prix, c'est à dire un changement à la limite de 0.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Approximation de la variation de prix}
+Si nous posons maintenant l'équation de la durée modifiée suivante:
+\begin{align*}
+D_m =-\frac{\partial P / P}{\partial y}
+\end{align*}
+\begin{itemize}
+\item On peut voir que dans la formule de la durée modifiée,  les changements de taux $y$ et de prix $P$ sont de nature infinitésimale. 
+\item Afin d'approximer la variation du prix $P$, nous substiuons $\partial P$ par $\Delta P$ et $\partial y$ par $\Delta y$.
+\item Afin de rendre la formule valide,  il faut modifier le signe égal $=$ par le signe d'approximation $\approx$.
+\end{itemize}
+\begin{align*}
+D_m \approx -\frac{\Delta P / P}{\Delta y}
+\end{align*}
+\end{frame}
+
+
+\begin{frame}{Approximation de la variation de prix}
+On peut ensuite effectuer une manipulation algébrique afin d'approximer la variation du prix de notre obligation avec la durée modifiée.
+\begin{align*}
+\frac{\Delta P}{P} \approx D_m \Delta y
+\end{align*}
+\begin{align*}
+\Delta P \approx D_m P \Delta y
+\end{align*}
+\begin{itemize}
+\item On voit dans cette formule que l'approximation de la variation du prix de notre obligation est une fonction de la durée modifiée, du prix lui même et de la variation du taux de rendement requis.
+\item Étant donné qu'il s'agit d'un approximation,  il faut être prudent avec la valeur que nous obtiendrons.
+\item Plus la variation de $y$, ($\Delta y$) sera petite,  plus la valeur obtenue par approximation sera précise. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Introduction à la convexité}
+\begin{itemize}
+\item Comme nous l'avons mentionné dans la section précédante, la durée offre une mesure acceptable pour la volatilité du prix d'une obligation. 
+\item On sait déja que cette mesure est imparfaite pour de grande variation du taux de rendement. 
+\item Un solution lorsque nous avons une forte variation du taux de rendement est d'utiliser une mesure de convexité. 
+\item En effet, la durée ne tient pas en compte la convexité existant dans la relation prix et taux de rendement. 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Introduction à la convexité}
+\begin{itemize}
+\item Pour la durée,  nous avons utilisé la dérivé première de notre fonction de prix par rapport au taux de rendement. 
+\item Dans le cas de la convexité, il nous suffit de dérivé à nouveau par rapport au taux de rendement. Plus précisément,  on prend la dérivé seconde de notre fonction de prix par rapport au taux de rendement.
+\end{itemize}
+\begin{align*}
+Conv=\frac{\partial^2P /P}{\partial y^2}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Mesure de convexité}
+\begin{itemize}
+\item Nous allons maintenant voir la formule de la convexité. 
+\item La première que nous allons voir est celle faisant la somme des flux monétaires actualisés. 
+\end{itemize}
+\begin{align*}
+Conv=\frac{\sum_{t=1}^n \frac{t(t+1)C}{(1+y)^{t+2}}+\frac{n(n+1)M}{(1+y)^{n+2}}}{P}
+\end{align*}
+\begin{itemize}
+\item La deuxième formule remplace la série de coupons actualisées par une annuité dans le but de simplifié la première.
+\end{itemize}
+\begin{align*}
+Conv=\frac{\frac{2C}{y^3} \left[1-\frac{1}{(1+y)^n} \right] -\frac{2Cn}{y^2(1+y)^{n+1}}+\frac{n(n+1)(M-C/y)}{(1+y)^{n+2}}}{P}
+\end{align*}
+\end{frame}
+
+
+\begin{frame}{Unités de mesure de la convexité}
+\begin{itemize}
+\item Comme pour la durée,  la convexité est exprimée en nombre de période de coupon.  
+\item À la différence de la durée,  l'unité de mesure de la convexité est élevée au carré.  On parlera donc de (période de coupon$^2$).  
+\item Il existera également une mesure de convexité en dollar qui se trouve en multipliant la mesure convexité par le prix de l'obligation.
+\end{itemize}
+\begin{align*}
+Conv^{\$}=Conv \times P
+\end{align*}
+\end{frame}
+
+\begin{frame}{Propriétés de la convexité}
+\begin{enumerate}
+\item Taux de rendement
+\begin{center}
+$r \downarrow$ \hspace{1cm} $\Longleftrightarrow$  \hspace{1cm} Convexité $\uparrow$
+\end{center}
+\begin{center}
+$r \uparrow$ \hspace{1cm} $\Longleftrightarrow$  \hspace{1cm} Convexité $\downarrow$
+\end{center}
+\item Taux de coupon
+\begin{center}
+$TC \uparrow$ \hspace{1cm} $\Longleftrightarrow$  \hspace{1cm} Convexité $\downarrow$
+\end{center}
+\begin{center}
+$TC \downarrow$ \hspace{1cm} $\Longleftrightarrow$  \hspace{1cm} Convexité $\uparrow$
+\end{center}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Approximation (quadratique)}
+En utilisant la durée et la convexité,  il nous sera possible d'approximer la variation du prix d'une obligation grâce à l'expansion de taylor.  Voici la formule obtenue après quelques manipulations.
+\begin{align*}
+\frac{\Delta P}{P} \approx -D_m \Delta y +\frac{1}{2} Conv(\Delta y)^2
+\end{align*}
+où 
+\begin{itemize}
+\item $D_m=$ durée modifiée 
+\item $Conv=$ convexité
+\item $y=$ taux de rendement 
+\item $\Delta y=$ variation dans le taux de rendement 
+\item $P=$ prix de notre obligation 
+\item $\Delta P=$ variation dans le prix de notre obligation 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Hypothèses importantes pour durée et convexité}
+\begin{itemize}
+\item Les mesures présentées supposent une structure à terme des taux d’intérêt horizontale et des mouvements de taux parallèles.
+\item Elles sont valides pour des obligations standards. Elles ne s’appliquent pas toujours lorsqu’il y a des clauses optionnelles.
+\item En particulier, l’objectif de la durée est de mesurer la sensibilité du prix par rapport au taux d’intérêt. La durée correspond à une moyenne pondérée des échéances presqu’exclusivement pour des obligations standards.
+\end{itemize}
+\end{frame}
+\begin{frame}{Durée et convexité effectives}
+Il est possible d’approximer la durée modifiée et la convexité pour obtenir des mesures valides pour n’importe quel type d’obligations et n’importe quelle forme de la structure à terme des taux. Les mesures obtenues sont appelées la durée et la convexité effectives:
+\begin{align*}
+D_m \approx \frac{P_{-}-P_{+}}{2(P_0)(\Delta y)}
+\end{align*}
+\begin{align*}
+Conv\approx \frac{P_{+}+P_{-}-2P_0}{(P_0)(\Delta y)^2}
+\end{align*}
+\end{frame}
+\end{document}

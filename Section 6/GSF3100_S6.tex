@@ -1,0 +1,150 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetheme{default}
+
+\usecolortheme{default}
+
+\title[S06 Marché obligataire gouvernemental]{Section 06 : Marché obligataire gouvernemental}
+\subtitle{GSF-3100 Marché des capitaux}
+\author[SP. Boucher]{Simon-Pierre Boucher\inst{1}}
+\institute[Université Laval]
+{
+  \inst{1}%
+  Département de finance, assurance et immobilier\\
+  Faculté des sciences de l'administration\\
+  Université Laval}
+\date[Automne 2021]{Automne 2021}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Introduction}
+Le marché obligataire gouvernemental est le plus important secteur du marché obligataire.  Le marché obligataire est composé des instruments suivants:
+\begin{itemize}
+\item Obligation standard
+\item Obligation à rendement réel
+\item Obligations coupons détachés
+\item Titres non fédéraux
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Obligation standard}
+\begin{block}{Caractéristiques}
+\begin{itemize}
+\item Coupons payables tous les six mois
+\item Dates communes pour le paiement des coupons
+\item  Dénomination en multiples de 1000 \$
+\item Échéance de 2, 5, 10 et 30 ans au Canada.  Aux États-Unis, il y a également l’échéance de 3 ans et 7 ans.  Les titres du Trésor d’une échéance de 2 à 10 ans sont appelés des \textbf{Treasury notes} tandis que ceux d’une échéance supérieure à 10 ans sont appelés des  \textbf{Treasury bonds}.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Obligation standard}
+\begin{block}{Prix présentés en 32e}
+Par convention de marché, la fraction normale utilisée pour les prix des titres du Trésor est de 1/32. 
+\begin{itemize}
+\item $(91-19+) \rightarrow 91.609375$
+\begin{align*}
+Prix=91+\frac{19}{32}+\frac{1}{64}=91.609375
+\end{align*}
+\item $(107-222) \rightarrow 107.6953125$
+\begin{align*}
+Prix=107+\frac{22}{32}+\frac{2}{256}=91.609375
+\end{align*}
+\item $(109-066) \rightarrow 109.2109375$
+\begin{align*}
+Prix=109+\frac{6}{32}+\frac{6}{256}=109.2109375
+\end{align*}
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Obligation à rendement réel}
+\begin{itemize}
+\item Obligation gouvernementale offrant une protection contre l’inflation.  
+\item Les paiements de coupons et le principal sont ajustés semestriellement en fonction de l’évolution de l’indice des prix à la consommation (IPC) depuis l’émission.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Obligation à rendement réel}
+\begin{block}{Prix obligation à rendement réel}
+\begin{align*}
+P=\frac{C \times \frac{IPC_1}{IPC_0}}{1+y}+\frac{C \times \frac{IPC_2}{IPC_0}}{(1+y)^2}+...+\frac{C \times \frac{IPC_n}{IPC_0}}{(1+y)^n}+\frac{M \times \frac{IPC_n}{IPC_0}}{(1+y)^n}
+\end{align*}
+\begin{align*}
+P=\frac{C}{1+y_{réel}}+\frac{C}{(1+y_{réel})^2}+...+\frac{C}{(1+y_{réel})^n}+\frac{M}{(1+y_{réel})^n}
+\end{align*}
+où
+\begin{align*}
+(1+y_{réel})^t \times \frac{IPC_t}{IPC_0} \times (1+y)^t
+\end{align*}
+et $IPC_t$ représente l'indice des prix à la consommation à la période $t$
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Obligations coupons détachés}
+Obligations à escompte pure synthétiques formées en séparant les coupons des obligations fédérales individuelles.
+\begin{block}{Caractéristiques}
+\begin{itemize}
+\item Ne sont pas émises par les gouvernements.
+\item Offertes par les courtiers en valeurs mobilières en réponse à la demande de titres coupon zéro.
+\item Présentent un taux de rendement légèrement supérieur au taux de rendement au comptant puisqu’elles sont moins liquides que les obligations standards.
+\item Il est possible de reconstituer les obligations.
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Marché primaire}
+Les obligations gouvernementales sont émises (et rachetées) par adjudication (ou enchère, auction):
+\begin{itemize}
+\item Un groupe de distributeurs accrédités présente des soumissions d’offres concurrentielles (spécifiant un montant et un taux) et non concurrentielles (spécifiant seulement un montant).  
+\item Les offres non concurrentielles sont acceptées dans leur totalité. Les offres concurrentielles sont ensuite acceptées au plus offrant (i.e., en ordre croissant de rendement demandé) jusqu’à l’adjudication complète du montant prévu. 
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Marché primaire}
+\begin{block}{Canada}
+Au Canada, on utilise surtout une adjudication à prix multiple (multiple-price auction):  
+\begin{itemize}
+\item Les offres concurrentielles acceptées sont émises à des prix différents reflétant les rendements demandés.  
+\item Les offres non concurrentielles sont émises au taux de rendement moyen pondéré des offres concurrentielles acceptées.
+\item Le taux de coupon est fixé au $1/4$ \% le plus près du rendement moyen donnant un prix moyen inférieur à 100 \% de la valeur nominale.  
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{Marché primaire}
+\begin{block}{États-Unis}
+Aux États-Unis, et pour les obligations à rendement réel au Canada, on utilise une adjudication à prix unique (single-price auction ou Dutch auction):  
+\begin{itemize}
+\item La dernière offre concurrentielle acceptée détermine le taux de rendement offert à l’émission.  Ce taux est appelé \textbf{stop-out yield} ou \textbf{high yield}.
+\item Toutes les offres acceptées (concurrentielles ou non) sont émises au taux \textbf{stop-out yield}.
+\item Le taux de coupon est généralement fixé de manière à obtenir un prix légèrement inférieur à 100 \% de la valeur nominale.  
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}{Marché secondaire}
+\begin{itemize}
+\item Les marchés obligataires canadiens et américains sont des marchés hors bourse.  
+\item Le marché américain est le plus liquide au monde.  Le marché canadien a vu sa liquidité s’améliorer au cours des dernières années.  
+\item L’activité est surtout alimentée par les obligations d’échéances de 3 à 10 ans.  
+\item Une série d’obligations est \textbf{on-the-run} si elle représente l’émission la plus récente sur le marché primaire pour une échéance donnée.  Sinon, elle est \textbf{off-the-run}.  La liquidité est beaucoup plus grande pour les obligations \textbf{on-the-run}.  
+\end{itemize}
+\end{frame}
+
+\end{document}

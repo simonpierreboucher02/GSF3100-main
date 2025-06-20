@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Hypothèque résidentiel}{2}{0}{1}
+\beamer@sectionintoc {2}{La Titrisation}{3}{0}{2}
+\beamer@sectionintoc {3}{Mortgage Passthrough Securities}{6}{0}{3}
+\beamer@sectionintoc {4}{Sequential CMOs}{16}{0}{4}
+\beamer@sectionintoc {5}{Protected amortization class (PAC) bonds}{18}{0}{5}
+\beamer@sectionintoc {6}{Stripped MBS}{19}{0}{6}
